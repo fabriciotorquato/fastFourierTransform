@@ -62,15 +62,3 @@ def generate():
 
     p.terminate()
 
-
-if __name__ == "__main__":
-    wave = [0, 1, 2, 3, 3, 2, 1, 0]
-    dfreq = dft(wave)
-    ffreq = fft(wave)
-    # dwave = dftinv(dfreq)
-    # fwave= fftinv(ffreq)
-    print "DFT"
-    print(dfreq)
-    print
-    print "FFT"
-    print(ffreq)

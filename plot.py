@@ -3,12 +3,8 @@ import plotly.plotly as py
 import numpy as np
 from core import fft, dft
 
-Fs = 256.0  # sampling rate
-Ts = 1.0/Fs  # sampling interval
-t = np.arange(0, 1, Ts)  # time vector
 
-
-def plot_grapher(y, isFFT=True):
+def plot_grapher(y, t, Fs, isFFT=True):
 
     n = len(y)  # length of the signal
     k = np.arange(n)
@@ -35,31 +31,3 @@ def plot_grapher(y, isFFT=True):
     plt.xlabel('Freq (Hz)')
     plt.ylabel('|Y(freq)|')
     plt.show()
-
-
-if __name__ == "__main__":
-
-    # Exercicio 1:
-    # - A
-    y = np.sin(2*np.pi*40*t)
-    plot_grapher(y,False)
-    # Exercicio 1:
-    # - B
-    y = np.sin(2*np.pi*40*t)
-    plot_grapher(y)
-
-    # Exercicio 1:
-    # - C
-    y = np.sin(2*np.pi*30*t)
-    plot_grapher(y)
-
-    y = np.sin(2*np.pi*50*t)
-    plot_grapher(y)
-
-    y = np.sin(2*np.pi*60*t)
-    plot_grapher(y)
-
-    # Exercicio 2:
-    y = 1*np.sin(2*np.pi*30*t) + 3*np.sin(2*np.pi*50*t) + \
-        2*np.sin(2*np.pi*60*t)
-    plot_grapher(y)
