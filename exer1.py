@@ -9,12 +9,12 @@ if __name__ == "__main__":
 
     # Exercicio 1:
     # - A
-    y = np.sin(2*np.pi*40*t)
+    y = np.sin(2*np.pi*20*t)
     plot_grapher(y,t,Fs,False)
 
     # Exercicio 1:
     # - B
-    y = np.sin(2*np.pi*40*t)
+    y = np.sin(2*np.pi*20*t)
     plot_grapher(y,t,Fs)
 
     # Exercicio 1:
